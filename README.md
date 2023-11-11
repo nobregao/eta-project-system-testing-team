@@ -38,9 +38,9 @@ O projeto está organizado nos seguintes componentes principais:
 6. **TestCt4**: Testa a ordenação dos clientes em ordem alfabética.
 7. **TestCt5**: Testa a funcionalidade de pesquisa para clientes.
 8. **TestCt6**: Testa a exclusão de um cliente da lista.
-9. **TestCt7**: Testa a realização de depósito na conta verificando saldo da conta
-10. **TestCt8**: Testa o saque em uma conta de cliente
-11. **TestCt9**: Verifica transação de depósito está no extrato de cliente
+9. **TestCt7**: Testa a realização de depósito na conta verificando saldo da conta.
+10. **TestCt8**: Testa o saque em uma conta de cliente.
+11. **TestCt9**: Verifica saldo de contas do mesmo cliente quando realizado depósito em uma delas.
 
 ## Contribuidores
 
