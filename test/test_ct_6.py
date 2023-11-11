@@ -28,9 +28,7 @@ class TestCt6:
         manager_page.click_aba_customers()
 
         customer_list_page = CustomerListPage(manager_page.driver)
-
         customer_list_page.is_url(), 'Aplicação não foi para página de clientes'
-
         customer_list_page.delete_customer(customer_for_delete.first_name)
 
         customers_after = customer_list_page.get_customers_in_table()

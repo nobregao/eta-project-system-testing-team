@@ -22,9 +22,12 @@ class TestCt3:
             customer_for_exist.post_code
         )
         page_add_customer.click_add_customer_btn()
+
         manager_page.click_aba_customers()
+
         customer_list_page = CustomerListPage(manager_page.driver)
         customer_list_page.is_url(), 'Aplicação não foi para página de clientes'
+
         customers = customer_list_page.get_customers_in_table()
 
         assert customer_for_exist.first_name in customers, 'Cliente não encontrado!'
