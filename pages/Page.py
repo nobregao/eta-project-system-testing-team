@@ -26,11 +26,11 @@ class Page:
 
     def get_elements(self, by, value, timeout=1):
         try:
-            element = WebDriverWait(self.driver, timeout).until(
+            elements = WebDriverWait(self.driver, timeout).until(
                 expected_conditions.visibility_of_all_elements_located((by, value)))
         except TimeoutException:
             return False
-        return element
+        return elements
 
     def close(self):
         self.driver.quit()
