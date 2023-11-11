@@ -1,4 +1,5 @@
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.alert import Alert
 
 from pages.Page import Page
 
@@ -16,3 +17,10 @@ class   PageAddCustomer(Page):
 
     def click_add_customer_btn(self):
         self.get_element(By.CSS_SELECTOR, 'button[type="submit"]').click()
+
+        alert = Alert(self.driver)
+        text_alert = alert.text
+
+        alert.accept()
+
+        return text_alert
