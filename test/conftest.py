@@ -37,12 +37,13 @@ def manager_page(login_page):
 
     manager_page.close()
 
+
 @pytest.fixture
-def transaction_withdrawl_account(customer_page):
-    customer_page.select_exists_account()
+def transaction_deposit_account(customer_page):
+    customer_page.select_exists_account("Neville Longbottom")
     customer_page.click_login_btn()
     transaction_account = TransactionAccountPage(customer_page.driver)
-    transaction_account.select_withdrawl_value_account()
+    transaction_account.select_deposit_value_account()
 
     yield transaction_account
 

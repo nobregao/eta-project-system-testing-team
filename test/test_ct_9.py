@@ -1,14 +1,22 @@
-import time
+class TestCt9:
 
-from pages.TransactionAccountPage import TransactionAccountPage
+    def test_transaction_account_different(self, transaction_deposit_account):
 
+        transaction_account = transaction_deposit_account
 
-class TestCt09:
+        value_deposit_account = 20.00
 
-    def test_transaction_statements_account(self, transaction_withdrawl_account):
+        balance_account1_inicial = transaction_account.get_balance()
 
-        transaction_account = transaction_withdrawl_account
-        valor_transaction = transaction_account.set_amount_transaction(20.00)
+        transaction_account.select_account("1014")
+        balance_account2_inicial = transaction_account.get_balance()
+        transaction_account.set_amount_transaction(value_deposit_account)
         transaction_account.click_execute_btn()
-        transaction_account.select_trasaction_statements()
-        transaction_account.table_trasactions_report()
+        balance_account2_final = transaction_account.get_balance()
+        assert balance_account2_final == (balance_account2_inicial + value_deposit_account)
+
+        transaction_account.select_account("1013")
+
+        balance_account1_final = transaction_account.get_balance()
+
+        assert balance_account1_inicial == balance_account1_final
