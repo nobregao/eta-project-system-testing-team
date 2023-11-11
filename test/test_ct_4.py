@@ -1,7 +1,7 @@
 from pages.CustomerListPage import CustomerListPage
 
 
-class TestCT4:
+class TestCt4:
 
     def test_sort_customer(self, manager_page):
         manager_page.click_aba_customers()

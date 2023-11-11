@@ -10,3 +10,4 @@ class TestLoginManager:
         customer_page = ManagerPage(login_page.driver)
 
         customer_page.is_url(), 'Aplicação não foi para página da gerente'
+

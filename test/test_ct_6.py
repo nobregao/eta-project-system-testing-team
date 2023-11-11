@@ -5,7 +5,7 @@ from pages.CustomerListPage import CustomerListPage
 from pages.PageAddCustomer import PageAddCustomer
 
 
-class TestCT6:
+class TestCt6:
 
     def test_delete_customer(self, manager_page):
 

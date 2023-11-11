@@ -1,7 +1,7 @@
 from pages.CustomerListPage import CustomerListPage
 
 
-class TestCT5:
+class TestCt5:
 
     def test_search_customer(self, manager_page):
         manager_page.click_aba_customers()
