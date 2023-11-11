@@ -1,13 +1,13 @@
-from random import randint
-
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
 
 from pages.Page import Page
 
-class   PageCreateAccount(Page):
+
+class PageCreateAccount(Page):
 
     url = "https://www.globalsqa.com/angularJs-protractor/BankingProject/#/manager/openAccount"
+
     element_select_list_names_customer = 'userSelect'
     element_option_name = '#userSelect > option'
     element_select_list_currency = 'currency'
@@ -27,4 +27,3 @@ class   PageCreateAccount(Page):
 
     def click_process_btn(self):
         self.get_element(By.CSS_SELECTOR, self.element_process_btn).click()
-

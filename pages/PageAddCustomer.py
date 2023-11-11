@@ -3,7 +3,8 @@ from selenium.webdriver.common.alert import Alert
 
 from pages.Page import Page
 
-class   PageAddCustomer(Page):
+
+class PageAddCustomer(Page):
 
     url = "https://www.globalsqa.com/angularJs-protractor/BankingProject/#/manager/addCust"
 
@@ -11,6 +12,7 @@ class   PageAddCustomer(Page):
     css_selector_last_name = '[ng-model="lName"]'
     css_selector_post_cod = '[ng-model="postCd"]'
     css_selector_add_customer_btn = 'button[type="submit"]'
+
     def __init__(self, driver):
         super().__init__(self.url, driver)
 
