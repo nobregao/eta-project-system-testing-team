@@ -21,3 +21,6 @@ class CustomerListPage(Page):
         first_column.click()
         first_column.click()
 
+    def search_customer(self, customer_name):
+        input_element = self.get_element(By.CSS_SELECTOR, "input")
+        input_element.send_keys(customer_name)
