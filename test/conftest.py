@@ -3,6 +3,7 @@ import pytest
 from pages.CustomerPage import CustomerPage
 from pages.LoginPage import LoginPage
 from pages.ManagerPage import ManagerPage
+from pages.TransactionAccountPage import TransactionAccountPage
 
 
 @pytest.fixture
@@ -35,3 +36,15 @@ def manager_page(login_page):
     yield manager_page
 
     manager_page.close()
+
+@pytest.fixture
+def transaction_withdrawl_account(customer_page):
+    customer_page.select_exists_account()
+    customer_page.click_login_btn()
+    transaction_account = TransactionAccountPage(customer_page.driver)
+    transaction_account.select_withdrawl_value_account()
+
+    yield transaction_account
+
+    transaction_account.close()
+
