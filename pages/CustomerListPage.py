@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 
 from pages.Page import Page
 
+
 class CustomerListPage(Page):
 
     url = "https://www.globalsqa.com/angularJs-protractor/BankingProject/#/manager/list"
