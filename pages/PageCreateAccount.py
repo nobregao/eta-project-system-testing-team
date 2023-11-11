@@ -17,17 +17,13 @@ class   PageCreateAccount(Page):
     def __init__(self, driver):
         super().__init__(self.url, driver)
 
-    def select_customer_name(self):
+    def select_customer_name(self, customer_name):
         select_customer = self.get_element(By.ID, self.element_select_list_names_customer)
-        customer_list = self.driver.find_elements(By.CSS_SELECTOR, self.element_option_name)
-        random_index = randint(0, len(customer_list) - 1)
-        Select(select_customer).select_by_visible_text('Harry Potter')
+        Select(select_customer).select_by_visible_text(customer_name)
 
-    def select_currency(self):
+    def select_currency(self, currency_name):
         select_currency = self.get_element(By.ID, self.element_select_list_currency)
-        currency_list = self.driver.find_elements(By.CSS_SELECTOR, self.element_option_currency)
-        random_index = randint(0, len(currency_list) - 1)
-        Select(select_currency).select_by_visible_text('Dollar')
+        Select(select_currency).select_by_visible_text(currency_name)
 
     def click_process_btn(self):
         self.get_element(By.CSS_SELECTOR, self.element_process_btn).click()
