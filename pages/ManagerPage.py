@@ -11,7 +11,7 @@ class ManagerPage(Page):
         super().__init__(self.url, driver)
 
     def click_aba_add_customer(self):
-        button = self.get_element(By.CSS_SELECTOR, "[ng-class='btnClass1']")
+        button = self.get_element(By.CSS_SELECTOR, "[ng-class='btnClass1']", 10)
         button.click()
 
     def click_aba_open_account(self):
