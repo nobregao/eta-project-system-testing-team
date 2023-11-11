@@ -11,9 +11,9 @@ class LoginPage(Page):
         super().__init__(self.url)
 
     def make_login_customer(self):
-        button = self.get_element(By.CSS_SELECTOR, "button.btn.btn-primary.btn-lg[ng-click='customer()']")
+        button = self.get_element(By.CSS_SELECTOR, "button.btn.btn-primary.btn-lg[ng-click='customer()']", 10)
         button.click()
 
     def make_login_manager(self):
-        button = self.get_element(By.CSS_SELECTOR, "button.btn.btn-primary.btn-lg[ng-click='manager()']")
+        button = self.get_element(By.CSS_SELECTOR, "button.btn.btn-primary.btn-lg[ng-click='manager()']", 10)
         button.click()
